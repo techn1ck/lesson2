@@ -57,7 +57,7 @@ def get_school_data(classes):
     for school_class in classes:
         data.append({
             'school_class' : school_class,
-            'scores' : [randint(2,5) for _ in range(10)]
+            'scores' : [randint(2,5) for _ in range(randint(1,10))]
             })
     return data
 
@@ -69,13 +69,13 @@ def main():
     
     # заполняю список оценок для учеников
     data = get_school_data(classes)
- #   print(data)
+#    print(data)
 
     # считаю средний балл по школе и по каждому классу
     score_sum = 0
     avg_score = dict() # в этот словарь записываю средний балл по каждому классу
     for school_class in data:
-        avg_score[ school_class['school_class'] ] = sum( school_class['scores'] ) / len( school_class['scores'] )
+        avg_score[ school_class['school_class'] ] = round (sum( school_class['scores'] ) / len( school_class['scores'] ), 1)
         score_sum += avg_score[ school_class['school_class'] ]
     
     avg_school_score = score_sum / len(avg_score)

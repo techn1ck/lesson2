@@ -34,8 +34,8 @@ def check_age(age):
 
 def main():
     age = input("Введите ваш возраст в полных годах:")
-    age_type = check_age(age)
-    print (age_type)
+    activity_by_age = check_age(age)
+    print (activity_by_age)
 
 
 if __name__ == "__main__":
