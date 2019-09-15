@@ -14,7 +14,7 @@
     Программа: Программирую
     
 """
-answers = {
+ANSWERS = {
     "как дела?" : "Хорошо",
     "что делаешь?" : "Работаю",
     "мы уже приехали?" : "Нет",
@@ -22,11 +22,11 @@ answers = {
 
 
 def ask_user_dict():
-    question = str()
+    question = ''
     while True:
-        question = input('Ваш вопрос? ')
-        if question.lower() != 'пока':
-            print(answers.get(question.lower(), 'Не знаю'))
+        question = input('Ваш вопрос? ').lower()
+        if question != 'пока':
+            print(ANSWERS.get(question, 'Не знаю'))
         else:
             break
 

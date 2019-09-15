@@ -9,13 +9,11 @@
    
 """
 
-
 def ask_user():
-    answer = str()
+    answer = ''
     while answer.lower() != 'хорошо':
         answer = input('Как дела? ')
 
-
-    
+  
 if __name__ == "__main__":
     ask_user()
